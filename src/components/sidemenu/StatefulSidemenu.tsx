@@ -21,7 +21,7 @@ const StatefulSidemenu = (props: Props): React.ReactNode => {
     useEffect(() => {
         const query = matchMedia('(min-width: 768px)');
         if (typeof window !== 'undefined')
-            query.addEventListener('change', (event) => {
+            query.addEventListener('change', (_event) => {
                 $isSidemenuOpen.set(false);
             });
     }, []);
