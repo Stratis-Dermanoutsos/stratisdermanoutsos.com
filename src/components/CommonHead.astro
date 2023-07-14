@@ -1,5 +1,5 @@
 ---
-import { TITLE_PREFIX } from '../Consts';
+import { TITLE_PREFIX, DESCRIPTION } from '../Consts';
 
 interface Props {
     title: string | undefined;
@@ -15,7 +15,7 @@ const title = TITLE_PREFIX + (props.title ? ` | ${props.title}` : '');
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='description' content='Stratis Dermanoutsos is a Senior Software Developer based in Athens, Greece. He is passionate about building software in the most efficient and maintainable way possible.' />
+    <meta name='description' content={DESCRIPTION} />
     <meta name='twitter:title' content={title} />
     <meta property='og:title' content={title} />
 </head>
