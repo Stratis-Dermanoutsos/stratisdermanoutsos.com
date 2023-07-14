@@ -4,7 +4,7 @@ export const DESCRIPTION = 'Stratis Dermanoutsos is a Senior Software Developer 
 export const SIDEMENU_ITEMS = [{
     title: 'Home',
     url: '/',
-    icon: 'Home'
+    icon: 'House'
 }, {
     title: 'About',
     url: '/about',

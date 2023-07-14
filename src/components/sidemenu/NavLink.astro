@@ -1,0 +1,29 @@
+---
+import AddressCardIcon from '../icons/AddressCardIcon.astro';
+import BookIcon from '../icons/BookIcon.astro';
+import BriefcaseIcon from '../icons/BriefcaseIcon.astro';
+import CircleInfoIcon from '../icons/CircleInfoIcon.astro';
+import CommentDotsIcon from '../icons/CommentDotsIcon.astro';
+import HouseIcon from '../icons/HouseIcon.astro';
+
+interface Props {
+    title: string;
+    url: string;
+    icon: string;
+};
+const props: Props = Astro.props;
+
+const svgClass = 'flex-shrink-0 w-5 h-5 text-txt-medium transition duration-75 dark:text-txt-medium group-hover:text-txt-high dark:group-hover:text-txt-high';
+---
+
+<li>
+    <a href={props.url} class='flex items-center p-2 text-txt-medium rounded-lg dark:text-txt-medium hover:text-txt-high dark:hover:text-txt-high hover:bg-high dark:hover:bg-high group'>
+        {props.icon === 'AdressCard' && <AddressCardIcon class={svgClass} />}
+        {props.icon === 'Book' && <BookIcon class={svgClass} />}
+        {props.icon === 'Briefcase' && <BriefcaseIcon class={svgClass} />}
+        {props.icon === 'CircleInfo' && <CircleInfoIcon class={svgClass} />}
+        {props.icon === 'CommentDots' && <CommentDotsIcon class={svgClass} />}
+        {props.icon === 'House' && <HouseIcon class={svgClass} />}
+        <span class='flex-1 ml-3 whitespace-nowrap'>{props.title}</span>
+    </a>
+</li>
