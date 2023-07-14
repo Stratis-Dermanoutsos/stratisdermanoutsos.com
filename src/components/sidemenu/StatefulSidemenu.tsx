@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { $isSidemenuOpen } from '../../stores/layout';
+import { $isSidemenuOpen, toggleSidemenu } from '../../stores/layout';
 import { useEffect } from 'react';
 
 interface Props {
@@ -22,7 +22,7 @@ const StatefulSidemenu = (props: Props): React.ReactNode => {
         const query = matchMedia('(min-width: 768px)');
         if (typeof window !== 'undefined')
             query.addEventListener('change', (_event) => {
-                $isSidemenuOpen.set(false);
+                toggleSidemenu(false);
             });
     }, []);
 
