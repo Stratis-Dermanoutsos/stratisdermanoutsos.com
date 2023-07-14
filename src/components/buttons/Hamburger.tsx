@@ -1,5 +1,4 @@
-import { useStore } from '@nanostores/react';
-import { $isSidemenuOpen, toggleSidemenu } from '../../stores/layout';
+import { toggleSidemenu } from '../../stores/layout';
 
 interface Props {
     children: React.ReactNode;
@@ -9,15 +8,9 @@ interface Props {
  * @desc Hamburger button for opening the sidemenu.
  * @param {React.ReactNode} children - The content of the button.
  * @returns {JSX.Element} - The hamburger button.
- * 
- * Was supposed to be `<slot />`, according to
- * @link https://docs.astro.build/en/core-concepts/framework-components/#can-i-use-astro-components-inside-my-framework-components
- * but it doesn't work, so I'm using children instead.
  */
 const Hamburger = (props: Props): React.ReactNode => {
-    const isSidemenuOpen = useStore($isSidemenuOpen);
-
-    const clickEvent = (e) => toggleSidemenu();
+    const clickEvent = () => toggleSidemenu();
 
     return (
         <button
