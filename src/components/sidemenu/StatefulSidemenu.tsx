@@ -1,5 +1,6 @@
 import { useStore } from '@nanostores/react';
 import { $isSidemenuOpen } from '../../stores/layout';
+import { useEffect } from 'react';
 
 interface Props {
     children: React.ReactNode;
@@ -10,8 +11,20 @@ interface Props {
  * @param {React.ReactNode} children - The content of the sidemenu.
  * @returns {JSX.Element} - The sidemenu.
  */
-const Sidemenu = (props: Props): React.ReactNode => {
+const StatefulSidemenu = (props: Props): React.ReactNode => {
     const isSidemenuOpen = useStore($isSidemenuOpen);
+
+    /**
+     * Create an observer for cases when the sidemenu is toggled on mobile 
+     * and the screen is resized to desktop.
+     */
+    useEffect(() => {
+        const query = matchMedia('(min-width: 768px)');
+        if (typeof window !== 'undefined')
+            query.addEventListener('change', (event) => {
+                $isSidemenuOpen.set(false);
+            });
+    }, []);
 
     const commonClasses = 'fixed duration-300 ease-in-out h-full left-0 transition-transform transform top-0 w-64 z-[999]';
     const className = isSidemenuOpen
@@ -25,4 +38,4 @@ const Sidemenu = (props: Props): React.ReactNode => {
     );
 };
 
-export default Sidemenu;
+export default StatefulSidemenu;
