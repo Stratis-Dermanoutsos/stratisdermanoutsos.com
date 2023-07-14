@@ -1,8 +1,10 @@
 ---
 import CommonHead from '../components/CommonHead.astro';
+import MobileNavbar from '../components/MobileNavbar.astro';
+import Sidemenu from '../components/sidemenu/Sidemenu.astro';
 
 interface Props {
-    title?: string;
+    title: string;
 };
 const props: Props = Astro.props;
 ---
@@ -10,6 +12,8 @@ const props: Props = Astro.props;
 <html lang='en'>
     <CommonHead title={props.title} />
     <body>
+        <MobileNavbar />
+        <Sidemenu isOpen={true} />
         <slot />
     </body>
 </html>
