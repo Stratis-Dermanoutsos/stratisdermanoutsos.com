@@ -1,18 +1,8 @@
 ---
-interface Props {
-    isOpen: boolean
-};
-const props: Props = Astro.props;
-
-
-
-const commonClasses = 'fixed duration-300 ease-in-out h-full left-0 transition-transform transform top-0 w-64 z-[999]';
-    const className = props.isOpen
-        ? `${commonClasses} translate-x-0`
-        : `${commonClasses} -translate-x-full md:translate-x-0`;
+import StatefulSidemenu from './Sidemenu.tsx';
 ---
 
-<aside class={className}>
+<StatefulSidemenu client:load>
     <div class='h-full px-3 py-4 overflow-y-auto bg-low dark:bg-low'>
         <ul class='space-y-2 font-medium'>
             <li>
@@ -30,4 +20,4 @@ const commonClasses = 'fixed duration-300 ease-in-out h-full left-0 transition-t
             </li>
         </ul>
     </div>
-</aside>
+</StatefulSidemenu>
