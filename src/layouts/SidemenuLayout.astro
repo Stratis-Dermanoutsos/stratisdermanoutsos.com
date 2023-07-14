@@ -1,0 +1,15 @@
+---
+import CommonHead from '../components/CommonHead.astro';
+
+interface Props {
+    title?: string;
+};
+const props: Props = Astro.props;
+---
+
+<html lang='en'>
+    <CommonHead title={props.title} />
+    <body>
+        <slot />
+    </body>
+</html>

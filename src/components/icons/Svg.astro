@@ -1,0 +1,16 @@
+---
+interface Props {
+    class: string | undefined;
+    viewBox: string;
+};
+const props: Props = Astro.props;
+---
+
+<svg
+    class={props.class}
+    viewBox={props.viewBox}
+    aria-hidden='true'
+    fill='currentColor'
+    xmlns='http://www.w3.org/2000/svg'>
+    <slot />
+</svg>

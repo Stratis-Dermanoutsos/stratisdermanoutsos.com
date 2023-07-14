@@ -10,6 +10,9 @@ module.exports = {
 				'medium': '#464567',
 				'high': '#605F8E',
 				'accent': '#1DFF9E',
+				'txt-low': '#ffffff4d',
+				'txt-medium': '#ffffffa6',
+				'txt-high': '#ffffffde',
 			}
 		}
 	},
