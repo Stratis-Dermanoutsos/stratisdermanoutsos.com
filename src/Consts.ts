@@ -25,4 +25,4 @@ export const SIDEMENU_ITEMS = [{
     title: 'About this page',
     url: '/about-this-page',
     icon: 'CircleInfo'
-}]
+}];
