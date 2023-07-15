@@ -1,13 +1,17 @@
 ---
 import { SIDEMENU_ITEMS } from '../../Consts';
+import Footer from './Footer.astro';
 import NavLink from './NavLink.astro';
 import StatefulSidemenu from './StatefulSidemenu.tsx';
 ---
 
 <StatefulSidemenu client:load>
-    <div class='h-full px-3 py-4 overflow-y-auto bg-low dark:bg-low'>
-        <ul class='space-y-2 font-medium'>
-            {SIDEMENU_ITEMS.map(item => <NavLink title={item.title} url={item.url} icon={item.icon} />)}
-        </ul>
+    <div class='h-full flex flex-col overflow-y-auto bg-low dark:bg-low'>
+        <div class='flex-1 p-4'>
+            <ul class='space-y-2 font-medium'>
+                {SIDEMENU_ITEMS.map(item => <NavLink {...item} />)}
+            </ul>
+        </div>
+        <Footer />
     </div>
 </StatefulSidemenu>
