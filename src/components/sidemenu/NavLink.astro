@@ -24,6 +24,6 @@ const svgClass = 'flex-shrink-0 w-5 h-5 text-txt-medium transition duration-75 d
             props.icon === 'CircleInfo' ? <CircleInfoIcon class={svgClass} /> :
             props.icon === 'CommentDots' ? <CommentDotsIcon class={svgClass} /> :
             <HouseIcon class={svgClass} />}
-        <span class='flex-1 ml-3 whitespace-nowrap'>{props.title}</span>
+        <span class='flex-1 ml-3 select-none whitespace-nowrap'>{props.title}</span>
     </a>
 </li>
