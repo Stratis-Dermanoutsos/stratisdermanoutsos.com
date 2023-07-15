@@ -1,4 +1,5 @@
 ---
+import Backdrop from '../components/Backdrop';
 import CommonHead from '../components/CommonHead.astro';
 import MobileNavbar from '../components/MobileNavbar.astro';
 import Sidemenu from '../components/sidemenu/Sidemenu.astro';
@@ -12,6 +13,7 @@ const props: Props = Astro.props;
 <html lang='en'>
     <CommonHead title={props.title} />
     <body class='font-roboto'>
+        <Backdrop client:idle />
         <MobileNavbar />
         <Sidemenu />
         <slot />
