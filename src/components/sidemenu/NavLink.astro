@@ -16,8 +16,8 @@ const props: Props = Astro.props;
 const svgClass = 'duration-75 flex-shrink-0 group-hover:text-txt-high dark:group-hover:text-txt-high h-5 text-txt-medium dark:text-txt-medium transition w-5';
 ---
 
-<li class='text-xl'>
-    <a href={props.url} class='hover:bg-high dark:hover:bg-high flex items-center p-2 text-txt-medium rounded-lg dark:text-txt-medium hover:text-txt-high dark:hover:text-txt-high group'>
+<li class='group text-xl'>
+    <a href={props.url} class='hover:bg-high dark:hover:bg-high flex items-center p-2 text-txt-medium rounded-lg dark:text-txt-medium hover:text-txt-high dark:hover:text-txt-high'>
         {props.icon === 'AdressCard' ? <AddressCardIcon class={svgClass} /> :
             props.icon === 'Book' ? <BookIcon class={svgClass} /> :
             props.icon === 'Briefcase' ? <BriefcaseIcon class={svgClass} /> :
