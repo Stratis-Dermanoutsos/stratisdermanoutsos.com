@@ -1,0 +1,12 @@
+---
+interface Props {
+    class?: string | undefined
+};
+const props: Props = Astro.props;
+---
+
+<div class:list={['flex gap-4 items-center text-txt-low w-full', props.class]}>
+    <hr class='h-px bg-txt-low border-0 w-full' />
+    <label class='grow text-txt-medium'>or</label>
+    <hr class='h-px bg-txt-low border-0 w-full' />
+</div>
