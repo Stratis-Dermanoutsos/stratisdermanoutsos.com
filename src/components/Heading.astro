@@ -3,10 +3,8 @@ interface Props {
     class?: string | undefined
 };
 const props: Props = Astro.props;
-
-const extraClasses = props.class ? ` ${props.class}` : '';
 ---
 
-<h1 class=`text-txt-high text-3xl lg:text-4xl${extraClasses}`>
+<h1 class:list={['text-txt-high text-3xl lg:text-4xl', props.class]}>
     <slot />
 </h1>
