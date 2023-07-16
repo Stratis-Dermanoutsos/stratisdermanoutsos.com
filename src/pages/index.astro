@@ -1,4 +1,7 @@
 ---
+import Heading from '../components/Heading.astro';
+import ExpandedLink from '../components/buttons/ExpandedLink.astro';
+import EmailIcon from '../components/icons/EmailIcon.astro';
 import SidemenuLayout from '../layouts/SidemenuLayout.astro';
 ---
 
@@ -14,5 +17,13 @@ import SidemenuLayout from '../layouts/SidemenuLayout.astro';
         </div>
     </div>
     <div class='flex flex-1 flex-col items-center justify-between md:py-28'>
+        <Heading class='text-center'>Want to hire me?</Heading>
+        <div class='flex flex-col gap-4 items-center text-txt-medium'>
+            <p>My main source of income is freelancing.</p>
+            <ExpandedLink href='mailto:stratis.dermanoutsos@gmail.com'>
+                <EmailIcon class='w-6 h-6 mr-2 text-accent' />
+                Email
+            </ExpandedLink>
+        </div>
     </div>
 </SidemenuLayout>
