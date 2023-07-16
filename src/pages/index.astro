@@ -1,9 +1,32 @@
 ---
 import Heading from '../components/Heading.astro';
 import Or from '../components/Or.astro';
+import CollapsedLink from '../components/buttons/CollapsedLink.astro';
 import ExpandedLink from '../components/buttons/ExpandedLink.astro';
 import EmailIcon from '../components/icons/EmailIcon.astro';
+import FiverrIcon from '../components/icons/FiverrIcon.astro';
+import FreelancerIcon from '../components/icons/FreelancerIcon.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import UpworkIcon from '../components/icons/UpworkIcon.astro';
 import SidemenuLayout from '../layouts/SidemenuLayout.astro';
+
+const socialLinks = [{
+    url: 'https://www.fiverr.com/stratis_derm',
+    icon: FiverrIcon,
+    text: 'Fiverr'
+}, {
+    url: 'https://www.linkedin.com/in/stratis-dermanoutsos',
+    icon: LinkedInIcon,
+    text: 'LinkedIn'
+}, {
+    url: 'https://www.upwork.com/freelancers/~0114743f3a4798b41c',
+    icon: UpworkIcon,
+    text: 'Upwork'
+}, {
+    url: 'https://www.freelancer.com/u/stratisderm',
+    icon: FreelancerIcon,
+    text: 'Freelancer'
+}];
 ---
 
 <SidemenuLayout title='Home'>
@@ -27,5 +50,13 @@ import SidemenuLayout from '../layouts/SidemenuLayout.astro';
             </ExpandedLink>
         </div>
         <Or class='px-20 md:px-4' />
+        <div class='flex gap-4 items-center'>
+            {socialLinks.map(item => (
+                <CollapsedLink href={item.url}>
+                    <item.icon class='w-6 h-6' slot='icon' />
+                    {item.text}
+                </CollapsedLink>
+            ))}
+        </div>
     </div>
 </SidemenuLayout>
