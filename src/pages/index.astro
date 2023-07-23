@@ -40,7 +40,6 @@ const email = SOCIAL_LINKS.email;
         <div class='flex gap-4 items-center'>
             {socials.map(item => SOCIAL_LINKS[item]).map(item => (
                 <CollapsedLink href={item!.url}>
-                    {/* Had to use conditional rendering here because item may be undefined. */}
                     {item! && <item.icon class='w-6 h-6' slot='icon' />}
                     {item!.text}
                 </CollapsedLink>

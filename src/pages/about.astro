@@ -1,10 +1,28 @@
 ---
 import Heading from '../components/Heading.astro';
+import IconLink from '../components/buttons/IconLink.astro';
 import SidemenuLayout from '../layouts/SidemenuLayout.astro';
+import { SOCIAL_LINKS } from '../Consts';
 
+const socials = [
+    'github',
+    'linkedin',
+    'twitter',
+    'stackoverflow',
+    'figma',
+    'dribble'
+];
 ---
+
 <SidemenuLayout title='About'>
     <div class='flex flex-1 flex-col items-center md:py-28'>
+        <div class='flex gap-4 items-center'>
+            {socials.map(item => SOCIAL_LINKS[item]).map(item => (
+                <IconLink href={item!.url}>
+                    {item && <item.icon class='w-6 h-6' />}
+                </IconLink>
+            ))}
+        </div>
     </div>
     <div class='flex flex-1 flex-col justify-between md:py-28'>
         <Heading>About me</Heading>

@@ -1,7 +1,12 @@
+import DribbleIcon from './components/icons/DribbleIcon.astro';
 import EmailIcon from './components/icons/EmailIcon.astro';
+import FigmaIcon from './components/icons/FigmaIcon.astro';
 import FiverrIcon from './components/icons/FiverrIcon.astro';
 import FreelancerIcon from './components/icons/FreelancerIcon.astro';
+import GithubIcon from './components/icons/GithubIcon.astro';
 import LinkedInIcon from './components/icons/LinkedInIcon.astro';
+import StackOverflowIcon from './components/icons/StackOverflowIcon.astro';
+import TwitterIcon from './components/icons/TwitterIcon.astro';
 import UpworkIcon from './components/icons/UpworkIcon.astro';
 
 export const TITLE_PREFIX = 'Stratis Dermanoutsos';
@@ -42,7 +47,7 @@ export const SOCIAL_LINKS: {
 } = {
     dribble: {
         url: 'https://dribbble.com/stratis_derm',
-        icon: FiverrIcon, // TODO
+        icon: DribbleIcon,
         text: 'Dribble'
     },
     email: {
@@ -52,7 +57,7 @@ export const SOCIAL_LINKS: {
     },
     figma: {
         url: 'https://www.figma.com/@stratis_derm',
-        icon: FiverrIcon, // TODO
+        icon: FigmaIcon,
         text: 'Figma'
     },
     fiverr: {
@@ -67,7 +72,7 @@ export const SOCIAL_LINKS: {
     },
     github: {
         url: 'https://github.com/Stratis-Dermanoutsos',
-        icon: FreelancerIcon, // TODO
+        icon: GithubIcon,
         text: 'GitHub'
     },
     linkedin: {
@@ -77,12 +82,12 @@ export const SOCIAL_LINKS: {
     },
     stackoverflow: {
         url: 'https://stackoverflow.com/users/13187980/stratis-dermanoutsos',
-        icon: UpworkIcon, // TODO
+        icon: StackOverflowIcon,
         text: 'Stack Overflow'
     },
     twitter: {
         url: 'https://twitter.com/stratis_derm',
-        icon: UpworkIcon, // TODO
+        icon: TwitterIcon,
         text: 'Twitter'
     },
     upwork: {
