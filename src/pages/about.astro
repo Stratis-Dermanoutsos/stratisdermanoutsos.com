@@ -12,6 +12,7 @@ const socials = [
     'figma',
     'dribble'
 ];
+const email = SOCIAL_LINKS.email;
 ---
 
 <SidemenuLayout title='About'>
@@ -32,7 +33,7 @@ const socials = [
             <p class='md:text-lg lg:text-2xl'>When I’m not working, I’m most likely enjoying a cup of coffee. ...or two.</p>
         </div>
         <p class='lg:text-2xl text-txt-medium'>Feel free to
-            <a href='mailto:stratis.dermanoutsos@gmail.com' class='text-accent font-bold'>email</a>
+            <a href={email!.url} class='text-accent font-bold'>email</a>
             me for business matters or anything else, even small talk.
         </p>
     </div>
