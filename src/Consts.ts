@@ -1,41 +1,53 @@
-import DribbleIcon from './components/icons/DribbleIcon.astro';
-import EmailIcon from './components/icons/EmailIcon.astro';
-import FigmaIcon from './components/icons/FigmaIcon.astro';
-import FiverrIcon from './components/icons/FiverrIcon.astro';
-import FreelancerIcon from './components/icons/FreelancerIcon.astro';
-import GithubIcon from './components/icons/GithubIcon.astro';
-import LinkedInIcon from './components/icons/LinkedInIcon.astro';
-import StackOverflowIcon from './components/icons/StackOverflowIcon.astro';
-import TwitterIcon from './components/icons/TwitterIcon.astro';
-import UpworkIcon from './components/icons/UpworkIcon.astro';
+import {
+    AddressCardIcon,
+    BookIcon,
+    BriefcaseIcon,
+    CircleInfoIcon,
+    CommentDotsIcon,
+    DribbleIcon,
+    EmailIcon,
+    FigmaIcon,
+    FiverrIcon,
+    FreelancerIcon,
+    GithubIcon,
+    HouseIcon,
+    LinkedInIcon,
+    StackOverflowIcon,
+    TwitterIcon,
+    UpworkIcon
+} from './components/icons/icons';
 
 export const TITLE_PREFIX = 'Stratis Dermanoutsos';
 export const DESCRIPTION = 'Stratis Dermanoutsos is a Senior Software Developer based in Athens, Greece. He is passionate about building software in the most efficient and maintainable way possible.';
 
-export const SIDEMENU_ITEMS = [{
-    title: 'Home',
+export const SIDEMENU_ITEMS: {
+    url: string,
+    icon: any
+    text: string
+}[] = [{
+    text: 'Home',
     url: '/',
-    icon: 'House'
+    icon: HouseIcon
 }, {
-    title: 'About',
+    text: 'About',
     url: '/about',
-    icon: 'AdressCard'
+    icon: AddressCardIcon
 }, {
-    title: 'Work',
+    text: 'Work',
     url: '/work',
-    icon: 'Briefcase'
+    icon: BriefcaseIcon
 }, {
-    title: 'Blog',
+    text: 'Blog',
     url: '/blog',
-    icon: 'CommentDots'
+    icon: CommentDotsIcon
 }, {
-    title: 'Notes',
+    text: 'Notes',
     url: 'https://notes.stratisdermanoutsos.com',
-    icon: 'Book'
+    icon: BookIcon
 }, {
-    title: 'About this page',
+    text: 'About this page',
     url: '/about-this-page',
-    icon: 'CircleInfo'
+    icon: CircleInfoIcon
 }];
 
 export const SOCIAL_LINKS: {
