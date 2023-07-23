@@ -6,7 +6,16 @@ import SidemenuLayout from '../layouts/SidemenuLayout.astro';
 <SidemenuLayout title='About'>
     <div class='flex flex-1 flex-col items-center md:py-28'>
     </div>
-    <div class='flex flex-1 flex-col md:py-28'>
+    <div class='flex flex-1 flex-col justify-between md:py-28'>
         <Heading>About me</Heading>
+        <div class='flex flex-col gap-4 text-txt-medium'>
+            <p class='md:text-lg lg:text-2xl'>I’m a <span class='text-accent font-bold'>Senior Software Developer</span> with an addiction to clean and efficient code.</p>
+            <p class='md:text-lg lg:text-2xl'>I started writing code when I was 15 years old as a hobby and it soon turned into my main profession.</p>
+            <p class='md:text-lg lg:text-2xl'>When I’m not working, I’m most likely enjoying a cup of coffee. ...or two.</p>
+        </div>
+        <p class='lg:text-2xl text-txt-medium'>Feel free to
+            <a href='mailto:stratis.dermanoutsos@gmail.com' class='text-accent font-bold'>email</a>
+            me for business matters or anything else, even small talk.
+        </p>
     </div>
 </SidemenuLayout>
