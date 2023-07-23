@@ -1,3 +1,4 @@
+import EmailIcon from './components/icons/EmailIcon.astro';
 import FiverrIcon from './components/icons/FiverrIcon.astro';
 import FreelancerIcon from './components/icons/FreelancerIcon.astro';
 import LinkedInIcon from './components/icons/LinkedInIcon.astro';
@@ -43,6 +44,11 @@ export const SOCIAL_LINKS: {
         url: 'https://dribbble.com/stratis_derm',
         icon: FiverrIcon, // TODO
         text: 'Dribble'
+    },
+    email: {
+        url: 'mailto:stratis.dermanoutsos@gmail.com',
+        icon: EmailIcon,
+        text: 'Email'
     },
     figma: {
         url: 'https://www.figma.com/@stratis_derm',
