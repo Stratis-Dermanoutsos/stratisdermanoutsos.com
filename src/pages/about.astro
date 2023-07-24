@@ -13,16 +13,30 @@ const socials = [
     'dribble'
 ];
 const email = SOCIAL_LINKS.email;
+
+const imageOverlayClasses = 'absolute bg-black  duration-500 ease-in-out left-0 opacity-0 group-hover:opacity-70 p-2 text-white transition-all w-full z-10';
 ---
 
 <SidemenuLayout title='About' class='flex-col-reverse'>
     <div class='flex flex-1 flex-col md:gap-4 items-center md:py-28'>
-        <picture class='border-8 border-high md:block flex-1 hidden pt-40 relative rounded-2xl w-full max-w-[256px]'>
+        <div class='border-8 border-high md:block flex-1 group hidden pt-40 relative rounded-2xl select-none w-full max-w-[256px]'>
+            <p class:list={['top-0 rounded-t-lg', imageOverlayClasses]}>
+                Location:
+                <a
+                    class='font-bold text-accent'
+                    href='https://goo.gl/maps/BAFf5BXBEnZ6cQ5z5'
+                    target='_blank'>
+                    Lake Doxa
+                </a>
+            </p>
             <img
-                alt='Stratis on a journey'
+                alt='Stratis on a journey at Lake Doxa'
                 class='absolute h-full left-0 object-center object-cover rounded-lg top-0 w-full'
                 src='/assets/profile.jpg' />
-        </picture>
+            <p class:list={['bottom-0 rounded-b-lg', imageOverlayClasses]}>
+                Picture of me during one of my favorite trips.
+            </p>
+        </div>
         <div class='flex flex-wrap gap-4 items-center justify-center max-w-xs'>
             {socials.map(item => SOCIAL_LINKS[item]).map(item => (
                 <IconLink href={item!.url}>
