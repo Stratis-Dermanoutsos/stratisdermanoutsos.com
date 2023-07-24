@@ -17,7 +17,7 @@ const email = SOCIAL_LINKS.email;
 ---
 
 <SidemenuLayout title='Home'>
-    <div class='flex flex-1 flex-col md:py-28 md:pr-4'>
+    <div class='flex flex-1 flex-col md:pt-20 lg:py-28 md:pr-2 lg:pr-4'>
         <div class='mb-8'>
             <Heading>Hi, I'm <span class='text-accent font-bold'>Stratis</span></Heading>
             <p class='text-txt-low lg:text-2xl'>Welcome to my page</p>
@@ -36,7 +36,7 @@ const email = SOCIAL_LINKS.email;
                 {email!.text}
             </ExpandedLink>
         </div>
-        <Or class='px-20 md:px-4' />
+        <Or class='gap-4 px-20 md:px-4' />
         <div class='flex gap-4 items-center'>
             {socials.map(item => SOCIAL_LINKS[item]).map(item => (
                 <CollapsedLink href={item!.url}>
