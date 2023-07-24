@@ -6,7 +6,8 @@ const props: Props = Astro.props;
 ---
 
 <a
+    class='bg-high flex gap-2 items-center p-4 rounded-2xl text-xl text-txt-high hover:text-accent uppercase'
     href={props.href}
-    class='bg-high flex gap-2 items-center p-4 rounded-2xl text-xl text-txt-high hover:text-accent uppercase'>
+    target='_blank'>
     <slot />
 </a>
