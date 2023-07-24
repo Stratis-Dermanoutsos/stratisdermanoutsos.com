@@ -6,6 +6,7 @@ import Sidemenu from '../components/sidemenu/Sidemenu.astro';
 
 interface Props {
     title: string;
+    class?: string;
 };
 const props: Props = Astro.props;
 ---
@@ -16,7 +17,10 @@ const props: Props = Astro.props;
         <Backdrop client:idle />
         <MobileNavbar />
         <Sidemenu />
-        <main class='flex flex-col md:flex-row gap-8 md:gap-4 min-h-[calc(100vh-56px)] md:min-h-screen overflow-y-scroll px-4 md:px-16 md:pl-80 py-8'>
+        <main class:list={[
+                'flex flex-col md:flex-row gap-8 md:gap-4 min-h-[calc(100vh-56px)] md:min-h-screen overflow-y-scroll px-4 md:px-16 md:pl-80 py-8',
+                props.class
+            ]}>
             <slot />
         </main>
     </body>

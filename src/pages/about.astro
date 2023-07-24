@@ -15,9 +15,15 @@ const socials = [
 const email = SOCIAL_LINKS.email;
 ---
 
-<SidemenuLayout title='About'>
-    <div class='flex flex-1 flex-col items-center md:py-28'>
-        <div class='flex gap-4 items-center'>
+<SidemenuLayout title='About' class='flex-col-reverse'>
+    <div class='flex flex-1 flex-col md:gap-4 items-center md:py-28'>
+        <picture class='border-8 border-high md:block flex-1 hidden pt-40 relative rounded-2xl w-full max-w-[256px]'>
+            <img
+                alt='Stratis on a journey'
+                class='absolute h-full left-0 object-center object-cover rounded-lg top-0 w-full'
+                src='/assets/profile.jpg' />
+        </picture>
+        <div class='flex flex-wrap gap-4 items-center justify-center max-w-xs'>
             {socials.map(item => SOCIAL_LINKS[item]).map(item => (
                 <IconLink href={item!.url}>
                     {item && <item.icon class='w-6 h-6' />}
