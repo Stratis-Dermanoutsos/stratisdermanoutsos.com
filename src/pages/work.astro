@@ -17,7 +17,7 @@ const email = SOCIAL_LINKS.email;
 
 <SidemenuLayout title='Work'>
     <div class='flex flex-col flex-1 h-full w-full'>
-        <div class='flex flex-1 flex-col items-center justify-between'>
+        <div class='flex flex-col h-fit items-center justify-between min-h-[372px] pb-8'>
             <Heading class='text-center'>Want to hire me?</Heading>
             <div class='flex flex-col gap-4 items-center text-txt-medium'>
                 <p>I strive to reply within an hour.</p>
@@ -26,15 +26,37 @@ const email = SOCIAL_LINKS.email;
                     {email!.text}
                 </ExpandedLink>
             </div>
-            <Or class='gap-8 px-20 md:px-4' />
+            <Or class='gap-8 px-14 sm:px-24 md:px-28 lg:px-32' />
             <div class='flex gap-4 items-center'>
                 {socials.map(item => SOCIAL_LINKS[item]).map(item => (
-                    <CollapsedLink href={item!.url}>
+                    <CollapsedLink href={item!.url} threshold='sm'>
                         {item! && <item.icon class='w-6 h-6' slot='icon' />}
                         {item!.text}
                     </CollapsedLink>
                 ))}
             </div>
+        </div>
+        <div class='flex flex-col items-center py-8'>
+            <Heading class='text-center'>My experience so far</Heading>
+            <ul class='flex flex-col p-4 w-full'>
+                <li class='flex flex-col gap-2 px-4'> <!-- company -->
+                    <a
+                        class='select-none text-2xl text-txt-high hover:text-accent w-fit'
+                        href='https://modus.gr'
+                        target='_blank'
+                        translate='no'> <!-- title -->
+                        MODUS S.A.
+                        <span class='text-lg text-txt-medium'>(1y 9m)</span> <!-- total duration -->
+                    </a>
+                    <ul class='flex flex-col gap-3 px-4 py-3'> <!-- job list -->
+                        <li class='bg-high flex flex-col gap-2 group px-4 py-2 rounded-2xl'> <!-- job -->
+                            <h4 class='select-none text-txt-high group-hover:text-accent' translate='no'>
+                                Senior .NET Developer <!-- title -->
+                            </h4>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </SidemenuLayout>
