@@ -15,7 +15,7 @@ const Hamburger = (props: Props): React.ReactNode => {
     return (
         <button
             onClick={clickEvent}
-            className='inline-flex items-center p-2 text-sm text-txt-medium rounded-lg md:hidden hover:bg-high focus:outline-none focus:ring-2 focus:ring-txt-high dark:text-txt-medium dark:hover:bg-high dark:focus:ring-txt-high'>
+            className='inline-flex items-center p-2 text-sm text-txt-medium rounded-lg md:hidden hover:bg-high focus:outline-none focus:ring-2 focus:ring-txt-high'>
             <span className='sr-only'>Open sidemenu</span>
             {props.children}
         </button>

@@ -5,11 +5,19 @@ interface Props {
     text: string;
 };
 const props: Props = Astro.props;
+
+const isActive = props.url === Astro.url.pathname;
+const extraClass = isActive ? 'bg-high text-txt-high' : 'text-txt-medium';
 ---
 
 <li class='group text-xl'>
-    <a href={props.url} class='hover:bg-high dark:hover:bg-high flex items-center p-2 text-txt-medium rounded-lg dark:text-txt-medium hover:text-txt-high dark:hover:text-txt-high'>
-        <props.icon class='duration-75 flex-shrink-0 group-hover:text-txt-high dark:group-hover:text-txt-high h-5 text-txt-medium dark:text-txt-medium transition w-5' />
+    <a
+        href={props.url}
+        class:list={[
+            'hover:bg-high flex items-center p-2 rounded-lg hover:text-txt-high',
+            extraClass,
+        ]}>
+        <props.icon class='duration-75 flex-shrink-0 group-hover:text-txt-high h-5 transition w-5' />
         <span class='flex-1 ml-3 select-none whitespace-nowrap'>{props.text}</span>
     </a>
 </li>
