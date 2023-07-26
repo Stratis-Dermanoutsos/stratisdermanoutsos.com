@@ -1,10 +1,7 @@
 ---
-interface Props {
-    url: string;
-    icon: any;
-    text: string;
-};
-const props: Props = Astro.props;
+import type INavLink from '../../types/NavLink';
+
+const props: INavLink = Astro.props as INavLink;
 
 const isActive = props.url === Astro.url.pathname;
 const extraClass = isActive ? 'bg-high text-txt-high' : 'text-txt-medium';

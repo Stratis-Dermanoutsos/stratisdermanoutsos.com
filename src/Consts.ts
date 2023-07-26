@@ -16,15 +16,12 @@ import {
     TwitterIcon,
     UpworkIcon
 } from './components/icons/icons';
+import type INavLink from './types/NavLink';
 
 export const TITLE_PREFIX = 'Stratis Dermanoutsos';
 export const DESCRIPTION = 'Stratis Dermanoutsos is a Senior Software Developer based in Athens, Greece. He is passionate about building software in the most efficient and maintainable way possible.';
 
-export const SIDEMENU_ITEMS: {
-    url: string;
-    icon: any;
-    text: string;
-}[] = [{
+export const SIDEMENU_ITEMS: INavLink[] = [{
     text: 'Home',
     url: '/',
     icon: HouseIcon
@@ -51,11 +48,7 @@ export const SIDEMENU_ITEMS: {
 }];
 
 export const SOCIAL_LINKS: {
-    [key: string]: {
-        url: string;
-        icon: any;
-        text: string;
-    }
+    [key: string]: INavLink
 } = {
     dribble: {
         url: 'https://dribbble.com/stratis_derm',
