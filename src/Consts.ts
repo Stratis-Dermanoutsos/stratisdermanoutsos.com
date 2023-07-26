@@ -15,8 +15,8 @@ import {
     StackOverflowIcon,
     TwitterIcon,
     UpworkIcon
-} from './components/icons/icons';
-import type INavLink from './types/NavLink';
+} from '@components/icons/icons';
+import type INavLink from 'src/types/NavLink';
 
 export const TITLE_PREFIX = 'Stratis Dermanoutsos';
 export const DESCRIPTION = 'Stratis Dermanoutsos is a Senior Software Developer based in Athens, Greece. He is passionate about building software in the most efficient and maintainable way possible.';

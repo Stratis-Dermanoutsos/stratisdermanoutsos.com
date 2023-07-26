@@ -1,23 +1,23 @@
 /* This file exists to group icon imports */
 
-import AddressCardIcon from './AddressCardIcon.astro';
-import BookIcon from './BookIcon.astro';
-import BriefcaseIcon from './BriefcaseIcon.astro';
-import CircleInfoIcon from './CircleInfoIcon.astro';
-import CommentDotsIcon from './CommentDotsIcon.astro';
-import DribbleIcon from './DribbleIcon.astro';
-import EmailIcon from './EmailIcon.astro';
-import FigmaIcon from './FigmaIcon.astro';
-import FiverrIcon from './FiverrIcon.astro';
-import FreelancerIcon from './FreelancerIcon.astro';
-import GithubIcon from './GithubIcon.astro';
-import HamburgerIcon from './HamburgerIcon.astro';
-import HouseIcon from './HouseIcon.astro';
-import LinkedInIcon from './LinkedInIcon.astro';
-import SdIcon from './SdIcon.astro';
-import StackOverflowIcon from './StackOverflowIcon.astro';
-import TwitterIcon from './TwitterIcon.astro';
-import UpworkIcon from './UpworkIcon.astro';
+import AddressCardIcon from '@components/icons/AddressCardIcon.astro';
+import BookIcon from '@components/icons/BookIcon.astro';
+import BriefcaseIcon from '@components/icons/BriefcaseIcon.astro';
+import CircleInfoIcon from '@components/icons/CircleInfoIcon.astro';
+import CommentDotsIcon from '@components/icons/CommentDotsIcon.astro';
+import DribbleIcon from '@components/icons/DribbleIcon.astro';
+import EmailIcon from '@components/icons/EmailIcon.astro';
+import FigmaIcon from '@components/icons/FigmaIcon.astro';
+import FiverrIcon from '@components/icons/FiverrIcon.astro';
+import FreelancerIcon from '@components/icons/FreelancerIcon.astro';
+import GithubIcon from '@components/icons/GithubIcon.astro';
+import HamburgerIcon from '@components/icons/HamburgerIcon.astro';
+import HouseIcon from '@components/icons/HouseIcon.astro';
+import LinkedInIcon from '@components/icons/LinkedInIcon.astro';
+import SdIcon from '@components/icons/SdIcon.astro';
+import StackOverflowIcon from '@components/icons/StackOverflowIcon.astro';
+import TwitterIcon from '@components/icons/TwitterIcon.astro';
+import UpworkIcon from '@components/icons/UpworkIcon.astro';
 
 export {
     AddressCardIcon,

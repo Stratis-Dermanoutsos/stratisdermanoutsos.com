@@ -1,4 +1,4 @@
-import { toggleSidemenu } from '../../stores/layout';
+import { toggleSidemenu } from '@stores/layout';
 
 interface Props {
     children: React.ReactNode;

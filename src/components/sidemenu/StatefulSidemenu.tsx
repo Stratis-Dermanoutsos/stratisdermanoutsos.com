@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { $isSidemenuOpen, toggleSidemenu } from '../../stores/layout';
+import { $isSidemenuOpen, toggleSidemenu } from '@stores/layout';
 import { useEffect } from 'react';
 
 interface Props {
