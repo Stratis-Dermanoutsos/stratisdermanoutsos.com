@@ -110,7 +110,7 @@ export const COMPANIES: ICompany[] = [{
     jobs: [{
         title: 'Senior .NET Developer',
         dateStart: new Date('2023-05-01'),
-        description: 'Working on a variety of projects for MODUS S.A. and its clients.'
+        description: 'Work on a variety of projects such as internal tools, web applications and servers. Collaborated with other teams to deliver high-quality software.'
     }, {
         title: 'Full-Stack Software Developer',
         dateStart: new Date('2021-11-01'),
