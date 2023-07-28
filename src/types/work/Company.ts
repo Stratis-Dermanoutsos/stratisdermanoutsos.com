@@ -2,8 +2,9 @@ import type Job from 'src/types/work/Job';
 
 interface Company {
     title: string;
+    url: string;
     dateStart: Date;
-    dateEnd?: Date | undefined;
+    dateEnd?: Date;
     jobs: Job[];
 };
 

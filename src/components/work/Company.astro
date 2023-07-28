@@ -1,0 +1,21 @@
+---
+import type ICompany from 'src/types/work/Company';
+import Job from '@components/work/Job.astro';
+import { getDurationString } from 'src/utils/date';
+
+const props: ICompany = Astro.props as ICompany;
+---
+
+<li class='flex flex-col gap-2 px-4'>
+    <a
+        class='duration-500 ease-in-out select-none text-2xl text-txt-high hover:text-accent w-fit transition-colors'
+        href={props.url}
+        target='_blank'
+        translate='no'>
+        {props.title}
+        <span class='text-lg text-txt-medium'>({getDurationString(props.dateStart, props.dateEnd)})</span> <!-- total duration -->
+    </a>
+    <ul class='flex flex-col gap-3 px-4 py-3'>
+        {props.jobs.map(job => <Job {...job} />)}
+    </ul>
+</li>

@@ -1,10 +1,11 @@
 ---
-import { SOCIAL_LINKS } from 'src/Consts';
+import { COMPANIES, SOCIAL_LINKS } from 'src/Consts';
 import Heading from '@components/Heading.astro';
 import Or from '@components/Or.astro';
 import CollapsedLink from '@components/buttons/CollapsedLink.astro';
 import ExpandedLink from '@components/buttons/ExpandedLink.astro';
 import SidemenuLayout from '@layouts/SidemenuLayout.astro';
+import Company from '@components/work/Company.astro';
 
 const socials = [
     'fiverr',
@@ -39,28 +40,9 @@ const email = SOCIAL_LINKS.email;
         <div class='flex flex-col items-center py-8'>
             <Heading class='text-center'>My experience so far</Heading>
             <ul class='flex flex-col p-4 w-full'>
-                <li class='flex flex-col gap-2 px-4'> <!-- company -->
-                    <a
-                        class='duration-500 ease-in-out select-none text-2xl text-txt-high hover:text-accent w-fit transition-colors'
-                        href='https://modus.gr'
-                        target='_blank'
-                        translate='no'> <!-- title -->
-                        MODUS S.A.
-                        <span class='text-lg text-txt-medium'>(1y 9m)</span> <!-- total duration -->
-                    </a>
-                    <ul class='flex flex-col gap-3 px-4 py-3'> <!-- job list -->
-                        <li class='bg-high cursor-default duration-500 ease-in-out flex flex-col gap-2 md:gap-0 md:hover:gap-2 group max-h-fit md:max-h-11 md:hover:max-h-64 overflow-hidden px-4 py-2 rounded-2xl transition-all'> <!-- job -->
-                            <h4 class='md:duration-500 md:ease-in-out select-none text-accent md:text-txt-high md:group-hover:text-accent text-2xl transition-colors' translate='no'>
-                                Senior .NET Developer <!-- title -->
-                            </h4>
-                            <h5 class='md:duration-500 md:ease-in-out md:opacity-0 md:group-hover:opacity-100 text-txt-low md:transition-opacity'>MAY 2023 - PRESENT (3 months)</h5> <!-- duration -->
-                            <h5 class='md:duration-500 md:ease-in-out md:opacity-0 md:group-hover:opacity-100 text-txt-medium md:transition-opacity'> <!-- description -->
-                                Develops and maintains services handling business logic.
-                                Created both desktop and web applications for internal use by the company.
-                            </h5>
-                        </li>
-                    </ul>
-                </li>
+                {COMPANIES.map((company, index) => (
+                    <Company {...company} key={index} />
+                ))
             </ul>
         </div>
     </div>

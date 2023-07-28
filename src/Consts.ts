@@ -17,6 +17,7 @@ import {
     UpworkIcon
 } from '@components/icons/icons';
 import type INavLink from 'src/types/NavLink';
+import type ICompany from 'src/types/work/Company';
 
 export const TITLE_PREFIX = 'Stratis Dermanoutsos';
 export const DESCRIPTION = 'Stratis Dermanoutsos is a Senior Software Developer based in Athens, Greece. He is passionate about building software in the most efficient and maintainable way possible.';
@@ -101,3 +102,28 @@ export const SOCIAL_LINKS: {
         text: 'Upwork'
     }
 };
+
+export const COMPANIES: ICompany[] = [{
+    title: 'MODUS S.A.',
+    url: 'https://modus.gr',
+    dateStart: new Date('2021-11-01'),
+    jobs: [{
+        title: 'Senior .NET Developer',
+        dateStart: new Date('2023-05-01'),
+        description: 'Working on a variety of projects for MODUS S.A. and its clients.'
+    }, {
+        title: 'Full-Stack Software Developer',
+        dateStart: new Date('2021-11-01'),
+        dateEnd: new Date('2023-05-01'),
+        description: 'Led the development of many portal applications used by thousands of daily users and other custom projects for clients. Took the initiative to introduce new technologies such as React and helped apply modern best practices. Helped in mentoring junior developers to improve their skills.'
+    }]
+}, {
+    title: 'Freelance',
+    url: SOCIAL_LINKS!.email!.url,
+    dateStart: new Date('2022-11-01'),
+    jobs: [{
+        title: 'Full-Stack Software Developer',
+        dateStart: new Date('2022-11-01'),
+        description: 'Senior .NET Developer with vast experience in React. I specialize in web development and have extensive experience in .NET development, Astro, React, Java, C#, JavaScript, and TypeScript. I have a proven track record of delivering innovative, custom solutions using .NET and React that meet my clients\' unique needs and help them achieve their business goals. I am dedicated to providing top-quality work and ensuring that my clients are satisfied with the results. Let\'s collaborate and bring your vision to life!'
+    }]
+}];

@@ -1,8 +1,8 @@
 interface Job {
     title: string;
     dateStart: Date;
-    dateEnd?: Date | undefined;
-    description?: string | undefined;
+    dateEnd?: Date;
+    description?: string;
 };
 
 export default Job;
