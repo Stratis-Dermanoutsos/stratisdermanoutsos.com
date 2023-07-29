@@ -26,7 +26,7 @@ const StatefulSidemenu = (props: Props): React.ReactNode => {
             });
     }, []);
 
-    const commonClasses = 'fixed duration-300 ease-in-out h-full left-0 transition-transform transform top-0 w-64 z-[999]';
+    const commonClasses = 'fixed duration-300 ease-in-out h-full left-0 transition-transform transform top-0 w-64 z-50';
     const className = isSidemenuOpen
         ? `${commonClasses} translate-x-0`
         : `${commonClasses} -translate-x-full md:translate-x-0`;

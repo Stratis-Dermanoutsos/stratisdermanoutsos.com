@@ -14,7 +14,7 @@ const threshold = props.threshold ?? 'xl';
     href={props.href}
     target='_blank'>
     <slot name='icon' />
-    <div class:list={[`max-w-0 ${threshold}:group-hover:max-w-[128px] overflow-hidden text-txt-high group-hover:text-txt-high`, transition]}>
+    <div class:list={[`max-w-0 ${threshold}:group-hover:max-w-collapsed-link overflow-hidden text-txt-high group-hover:text-txt-high`, transition]}>
         <slot />
     </div>
 </a>

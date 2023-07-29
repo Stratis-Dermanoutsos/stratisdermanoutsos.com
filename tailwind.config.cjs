@@ -16,6 +16,10 @@ module.exports = {
 				'txt-low': '#ffffff4d',
 				'txt-medium': '#ffffffa6',
 				'txt-high': '#ffffffde',
+			},
+			maxWidth: {
+				'1/2': '50%',
+				'collapsed-link': '128px'
 			}
 		}
 	},

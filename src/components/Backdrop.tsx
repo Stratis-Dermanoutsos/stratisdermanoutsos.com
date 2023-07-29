@@ -5,7 +5,7 @@ const Backdrop = () => {
     const isSidemenuOpen = useStore($isSidemenuOpen);
     const clickEvent = () => toggleSidemenu(false);
 
-    const commonClasses = 'bg-black fixed inset-0 z-[998]';
+    const commonClasses = 'bg-black fixed inset-0 z-40';
     const className = isSidemenuOpen
         ? `${commonClasses} bg-opacity-50`
         : `${commonClasses} bg-opacity-0 pointer-events-none`;
