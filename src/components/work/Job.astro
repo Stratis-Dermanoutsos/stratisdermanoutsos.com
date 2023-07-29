@@ -8,9 +8,17 @@ const dateStart = getShortString(props.dateStart);
 const dateEnd = getShortString(props.dateEnd);
 ---
 
-<li class='bg-high cursor-default duration-500 ease-in-out flex flex-col gap-2 md:gap-0 md:hover:gap-2 group max-h-fit md:max-h-11 md:hover:max-h-64 overflow-hidden px-4 py-2 rounded-2xl transition-all'>
+<li class='bg-high cursor-default duration-500 ease-in-out flex flex-col gap-2 md:gap-0 md:hover:gap-2 group max-h-fit md:max-h-11 md:hover:max-h-64 overflow-hidden px-4 py-2 relative rounded-2xl transition-all'>
+    {props.url && <a
+        class='absolute cursor-pointer left-0 h-full top-0 w-full'
+        href={props.url}
+        target='_blank' />}
     <h4 class='md:duration-500 md:ease-in-out select-none text-accent md:text-txt-high md:group-hover:text-accent text-2xl transition-colors' translate='no'>
         {props.title}
+        {props.url &&  (
+            <span class='md:duration-500 md:ease-in-out md:opacity-0 md:group-hover:opacity-100 text-sm text-txt-medium md:transition-opacity'>
+                (Click me!)
+            </span>)}
     </h4>
     <h5 class='md:duration-500 md:ease-in-out md:opacity-0 md:group-hover:opacity-100 text-txt-low md:transition-opacity'>
         {dateStart} - {dateEnd} ({getDurationString(props.dateStart, props.dateEnd)})

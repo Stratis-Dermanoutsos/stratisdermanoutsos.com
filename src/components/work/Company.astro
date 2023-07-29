@@ -13,7 +13,7 @@ const props: ICompany = Astro.props as ICompany;
         target='_blank'
         translate='no'>
         {props.title}
-        <span class='text-lg text-txt-medium'>({getDurationString(props.dateStart, props.dateEnd)})</span> <!-- total duration -->
+        <span class='text-lg text-txt-medium'>({getDurationString(props.dateStart, props.dateEnd)})</span>
     </a>
     <ul class='flex flex-col gap-3 px-4 py-3'>
         {props.jobs.map(job => <Job {...job} />)}

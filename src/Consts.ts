@@ -126,4 +126,25 @@ export const COMPANIES: ICompany[] = [{
         dateStart: new Date('2022-11-01'),
         description: 'Senior .NET Developer with vast experience in React. I specialize in web development and have extensive experience in .NET development, Astro, React, Java, C#, JavaScript, and TypeScript. I have a proven track record of delivering innovative, custom solutions using .NET and React that meet my clients\' unique needs and help them achieve their business goals. I am dedicated to providing top-quality work and ensuring that my clients are satisfied with the results. Let\'s collaborate and bring your vision to life!'
     }]
+}, {
+    title: 'Open Source',
+    url: `${SOCIAL_LINKS!.github!.url}/lists/is-contributing`,
+    dateStart: new Date('2020-09-15'),
+    jobs: [{
+        title: 'DataStories-UniPi/miniDB',
+        url: 'https://github.com/DataStories-UniPi/miniDB',
+        dateStart: new Date('2022-05-01'),
+        dateEnd: new Date('2022-11-14'),
+        description: 'The miniDB project is a minimal and easy to expand and develop for RMDBS tool, written exclusivelly in Python 3. MiniDB\'s main goal is to provide the user with as much functionality as possible while being easy to understand and even easier to expand.Thus, miniDB\'s primary market are students and researchers that want to work with a tool that they can understand through and through, while being able to implement additional features as quickly as possible.'
+    }, {
+        title: 'Stratis-Dermanoutsos/Money_CLI',
+        url: 'https://github.com/Stratis-Dermanoutsos/Money_CLI',
+        dateStart: new Date('2022-01-02'),
+        description: 'Money is an Open Source CLI tool for anyone to note and see quick stats of their money usage.'
+    }, {
+        title: '...and more',
+        url: `${SOCIAL_LINKS!.github!.url}/lists/is-contributing`,
+        dateStart: new Date('2020-09-15'),
+        description: 'I have contributed to many open source projects and continue to do so when I have the time. You can see the full list by clicking here.'
+    }]
 }];
