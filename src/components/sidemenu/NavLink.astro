@@ -12,7 +12,7 @@ const extraClass = isActive ? 'bg-high text-txt-high' : 'text-txt-medium';
         href={props.url}
         class:list={[
             'hover:bg-high flex items-center p-2 rounded-lg hover:text-txt-high',
-            extraClass,
+            extraClass
         ]}>
         <props.icon class='duration-75 flex-shrink-0 group-hover:text-txt-high h-5 transition w-5' />
         <span class='flex-1 ml-3 select-none whitespace-nowrap'>{props.text}</span>
