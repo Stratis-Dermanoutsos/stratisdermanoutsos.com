@@ -103,6 +103,20 @@ export const SOCIAL_LINKS: {
     }
 };
 
+export const PAGE_LINKS: INavLink[] = [{
+    url: 'https://github.com/Stratis-Dermanoutsos/hub.stratisdermanoutsos.com',
+    icon: GithubIcon,
+    text: 'GitHub'
+}, {
+    url: 'https://www.figma.com/@stratis_derm', // TODO
+    icon: FigmaIcon,
+    text: 'Figma'
+}, {
+    url: 'https://dribbble.com/stratis_derm', // TODO
+    icon: DribbleIcon,
+    text: 'Dribble'
+}];
+
 export const COMPANIES: ICompany[] = [{
     title: 'MODUS S.A.',
     url: 'https://modus.gr',
