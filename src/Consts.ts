@@ -108,11 +108,11 @@ export const PAGE_LINKS: INavLink[] = [{
     icon: GithubIcon,
     text: 'GitHub'
 }, {
-    url: 'https://www.figma.com/@stratis_derm', // TODO
+    url: 'https://www.figma.com/community/file/1275022676306773824/hub.stratisdermanoutsos.com-June-2023',
     icon: FigmaIcon,
     text: 'Figma'
 }, {
-    url: 'https://dribbble.com/stratis_derm', // TODO
+    url: 'https://dribbble.com/shots/22324847-hub-stratisdermanoutsos-com-June-2023',
     icon: DribbleIcon,
     text: 'Dribble'
 }];
