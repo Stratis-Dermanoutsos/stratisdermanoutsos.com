@@ -39,10 +39,8 @@ const email = SOCIAL_LINKS.email;
         </div>
         <div class='flex flex-col items-center py-8'>
             <Heading class='text-center'>My experience so far</Heading>
-            <ul class='flex flex-col p-4 w-full'>
-                {COMPANIES.map((company, index) => (
-                    <Company {...company} key={index} />
-                ))
+            <ul class='flex flex-col md:px-4 py-4  w-full'>
+                {COMPANIES.map(company => <Company {...company} />)}
             </ul>
         </div>
     </div>

@@ -20,6 +20,9 @@ module.exports = {
 			maxWidth: {
 				'1/2': '50%',
 				'collapsed-link': '128px'
+			},
+			minHeight: {
+				'mobile': 'calc(100vh - 56px)'
 			}
 		}
 	},
