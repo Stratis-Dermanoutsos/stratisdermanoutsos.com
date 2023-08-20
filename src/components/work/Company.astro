@@ -15,7 +15,7 @@ const props: ICompany = Astro.props as ICompany;
         {props.title}
         <span class='text-lg text-txt-medium'>({getDurationString(props.dateStart, props.dateEnd)})</span>
     </a>
-    <ul class='flex flex-col gap-3 px-4 py-3'>
+    <ul class='flex flex-col gap-3 px-2 md:px-4 py-3'>
         {props.jobs.map(job => <Job {...job} />)}
     </ul>
 </li>
