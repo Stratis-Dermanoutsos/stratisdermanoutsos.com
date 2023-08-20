@@ -1,5 +1,6 @@
 ---
 import CommonHead from '@components/CommonHead.astro';
+import ExpandedLink from '@components/buttons/ExpandedLink.astro';
 import { SdIcon } from '@components/icons/icons';
 
 const title = 'Not Found';
@@ -15,7 +16,10 @@ const route = Astro.url.pathname;
                 <span class='text-accent'>404</span>
                 : Not found
             </h1>
-            <pre class='text-txt-medium mt-4'>Path: {route}</pre>
+            <pre class='text-txt-medium mt-4 mb-12'>Path: {route}</pre>
+            <ExpandedLink class='font-bold' href='/' targetSelf={false}>
+                Back to homepage
+            </ExpandedLink>
         </main>
     </body>
 </html>
