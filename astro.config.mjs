@@ -9,6 +9,9 @@ export default defineConfig({
   adapter: vercel({
     analytics: true
   }),
+  build: {
+    split: true
+  },
   integrations: [tailwind(), react()],
   output: "server"
 });
