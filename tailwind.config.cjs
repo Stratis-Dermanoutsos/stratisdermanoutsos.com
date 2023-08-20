@@ -17,12 +17,16 @@ module.exports = {
 				'txt-medium': '#ffffffa6',
 				'txt-high': '#ffffffde',
 			},
+			maxHeight: {
+				'index': '800px'
+			},
 			maxWidth: {
 				'1/2': '50%',
 				'collapsed-link': '128px'
 			},
 			minHeight: {
-				'mobile': 'calc(100vh - 56px)'
+				'mobile': 'calc(100vh - 56px)',
+				'work-hire-me': '372px'
 			}
 		}
 	},

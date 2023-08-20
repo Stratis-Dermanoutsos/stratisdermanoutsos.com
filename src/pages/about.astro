@@ -12,7 +12,6 @@ const socials = [
     'figma',
     'dribble'
 ];
-const email = SOCIAL_LINKS.email;
 
 const imageOverlayClasses = 'absolute bg-black  duration-500 ease-in-out left-0 opacity-0 group-hover:opacity-70 p-2 text-white transition-all w-full z-10';
 ---
@@ -48,12 +47,12 @@ const imageOverlayClasses = 'absolute bg-black  duration-500 ease-in-out left-0 
     <div class='flex flex-1 flex-col justify-between md:py-28'>
         <Heading>About me</Heading>
         <div class='flex flex-col gap-4 text-txt-medium'>
-            <p class='md:text-lg lg:text-2xl'>I’m a <span class='text-accent font-bold'>Senior Software Developer</span> with an addiction to clean and efficient code.</p>
-            <p class='md:text-lg lg:text-2xl'>I started writing code when I was 15 years old as a hobby and it soon turned into my main profession.</p>
-            <p class='md:text-lg lg:text-2xl'>When I’m not working, I’m most likely enjoying a cup of coffee. ...or two.</p>
+            <p class='sm:text-lg lg:text-2xl'>I’m a <span class='text-accent font-bold'>Senior Software Developer</span> with an addiction to clean and efficient code.</p>
+            <p class='sm:text-lg lg:text-2xl'>I started writing code when I was 15 years old as a hobby and it soon turned into my main profession.</p>
+            <p class='sm:text-lg lg:text-2xl'>When I’m not working, I’m most likely enjoying a cup of coffee. ...or two.</p>
         </div>
         <p class='lg:text-2xl text-txt-medium'>Feel free to
-            <a href={email!.url} class='text-accent font-bold'>email</a>
+            <a href={SOCIAL_LINKS.email!.url} class='text-accent font-bold'>email</a>
             me for business inquiries or anything else, even small talk.
         </p>
     </div>
