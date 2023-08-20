@@ -17,13 +17,13 @@ const props: Props = Astro.props;
         <Backdrop client:idle />
         <MobileNavbar />
         <Sidemenu />
-        <main class:list={[
-            'flex flex-col md:flex-row gap-8 md:gap-4 min-h-mobile md:min-h-screen px-4 md:px-16 md:pl-80 py-8',
-            props.class
-        ]}>
-            <!-- <div class=' overflow-hidden'> -->
+        <main class='flex md:justify-center min-h-mobile md:min-h-screen px-4 md:px-16 md:pl-80 py-8'>
+            <div class:list={[
+                'flex flex-col md:flex-row gap-8 md:gap-4 max-w-5xl',
+                props.class
+            ]}>
                 <slot />
-            <!-- </div> -->
+            </div>
         </main>
     </body>
 </html>
