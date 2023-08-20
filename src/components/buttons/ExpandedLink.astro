@@ -1,13 +1,19 @@
 ---
 interface Props {
+    class?: string;
     href: string;
+    targetSelf?: boolean;
 };
 const props: Props = Astro.props;
 ---
 
 <a
-    class='bg-high duration-500 ease-in-out flex gap-2 items-center p-4 rounded-2xl text-xl text-txt-high hover:text-accent transition-colors uppercase'
+    class:list={[
+        'bg-high duration-500 ease-in-out flex gap-2 items-center p-4 rounded-2xl text-xl text-txt-high hover:text-accent transition-colors uppercase',
+        props.class
+    ]}
     href={props.href}
-    target='_blank'>
+    target={props.targetSelf === false ? '_self' : '_blank'}
+>
     <slot />
 </a>
